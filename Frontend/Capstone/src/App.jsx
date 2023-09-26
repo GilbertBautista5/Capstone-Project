@@ -1,13 +1,21 @@
-import { useState } from 'react'
-import AppRoutes from './routes/AppRoutes'
 import './App.css'
+import AppRoutes from './routes/AppRoutes'
+// import { UserProvider } from './context/UserContext'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+
+    {/* <UserProvider> */}
+
      <AppRoutes />
+
+     {/* </UserProvider> */}
+
+
+     
+
     </>
   )
 }

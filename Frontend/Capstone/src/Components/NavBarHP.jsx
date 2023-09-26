@@ -17,6 +17,8 @@ import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact', 'Sign Up'];
+const pages = [{link: '/', label: 'Home'}, {link: '/about/', label: 'About'}, 
+    {link: '/LoginPage/', label: 'Sign Up'}]
 
 function DrawerAppBar(props) {
   const { window } = props;
