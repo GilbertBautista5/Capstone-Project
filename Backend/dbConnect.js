@@ -1,6 +1,6 @@
 'use strict';
 const Mongoose = require('mongoose');
-const uri = process.env.DB_URI ||"mongodb://localhost/Capstone";
+const uri = process.env.DB_URI ||"mongodb://127.0.0.1/Capstone";
 
 const mongooseOptions = {
   useNewUrlParser: true,

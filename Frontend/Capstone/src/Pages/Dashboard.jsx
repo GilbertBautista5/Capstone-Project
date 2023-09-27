@@ -1,12 +1,13 @@
 import React from 'react'
-import PrimarySearchAppBar from '../Components/NavBarDB'
+import ToDoList2 from '../Components/ToDoList2'
 
 export default function Dashboard() {
   return (
 
-    <div>
-        <PrimarySearchAppBar/>
-        
+    
+    <div className='task-form'>
+      <ToDoList2 />
     </div>
+        
   )
 }
