@@ -1,17 +1,17 @@
 import './App.css'
-import AppRoutes from './routes/AppRoutes'
-// import { UserProvider } from './context/UserContext'
+import AppRoutes from './Routes/AppRoutes'
+import { UserProvider } from './Context/UserContext'
 
 function App() {
 
   return (
     <>
 
-    {/* <UserProvider> */}
+    <UserProvider>
 
      <AppRoutes />
 
-     {/* </UserProvider> */}
+     </UserProvider>
 
 
      
