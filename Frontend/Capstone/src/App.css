@@ -169,3 +169,15 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .ApiComponentBox {
+    display: flex;
+  }
+
+  .Parapraph {
+    display: flex;
+  }
+
+  .header1 {
+    justify-content: center;
+  }

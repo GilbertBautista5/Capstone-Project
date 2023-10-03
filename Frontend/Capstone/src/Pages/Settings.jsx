@@ -1,11 +1,15 @@
 import React from 'react'
 import ResponsiveDrawer from '../Components/Sidebar2'
 
-export default function Contact() {
+export default function Settings() {
   return (
     <div>
-        <h1>Contact</h1>
+        <h1>Settings</h1>
+        <div className='settingComponentbox'> 
+        </div>
         <ResponsiveDrawer/>
+       
+ 
       
     </div>
   )

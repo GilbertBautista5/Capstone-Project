@@ -1,6 +1,6 @@
 import React from "react";
 import DrawerAppBar from "../Components/NavBarHP";
-import Login from "../Components/Login";
+import Login from "../Components/LoginForm";
 
 
 export default function LoginPage() {

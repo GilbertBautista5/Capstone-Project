@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "../Pages/Homepage";
 import Dashboard from "../Pages/Dashboard";
 import About from "../Pages/About";
-import Contact from "../Pages/Contact";
+import Settings from "../Pages/Settings";
 import Login from "../Pages/LoginPage";
 
 
@@ -15,7 +15,7 @@ function AppRoutes(props) {
     <Route index element={<Homepage {...props} />} />
     <Route path="/dashboard" element = {<Dashboard {...props} />} />
     <Route path="/about" element = {<About {...props} />} />
-    <Route path="/contact" element = {<Contact {...props} />} />
+    <Route path="/settings" element = {<Settings {...props} />} />
     <Route path="/login" element = {<Login {...props} />} />
 
 
