@@ -1,8 +1,8 @@
 import React from 'react'
-import ToDoList2 from '../Components/ToDoList2'
+// import ToDoList2 from '../Components/ToDoList2'
 import ResponsiveDrawer from '../Components/Sidebar3'
-// import BasicDateCalendar from '../Components/Calendar'
-// import CommonlyUsedComponents from '../Components/CalendarForm'
+import QuoteApi from '../Components/QuoteAPI'
+
 
 export default function Dashboard() {
   return (
@@ -10,9 +10,10 @@ export default function Dashboard() {
     
     <div className='task-form'>
       <ResponsiveDrawer/>
-      {/* <BasicDateCalendar />
-      <CommonlyUsedComponents /> */}
-      <ToDoList2 />
+      <QuoteApi />
+      
+      
+      {/* <ToDoList2 /> */}
     </div>
         
   )

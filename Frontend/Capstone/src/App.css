@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-  * {
+  /* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -152,7 +152,7 @@
   
   .edit-icon {
     color: #fff;
-  }
+  } */
 
   .HomePage {
     background-color: #fff;
@@ -163,4 +163,9 @@
     display: flex;
     justify-content: space-between;
     
+  }
+
+  .LoginContainer {
+    display: flex;
+    justify-content: space-between;
   }
