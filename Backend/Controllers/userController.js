@@ -15,7 +15,7 @@ const loginUser = async (req, res) => {
           return; // when sending responses and finishing early, manually return or end the function to stop further processing
       }
       // Validate if user exists in our database
-      const user = await Models.User.findOne({ raw: true, where: { email: email }});
+      const user = await Models.User.findOne( { email: email });
 
       // if they do exist, make sure their password matches - need to check encrypted version of password
       if (user && (await bcrypt.compare(password, user.password))) {

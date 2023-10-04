@@ -5,7 +5,7 @@ const cors = require('cors')
 require("dotenv").config();
 let dbConnect = require("./dbConnect");
 let userRoutes = require('./Routes/userRoutes')
-let noteRoutes = require('/Routes/noteRoutes')
+let noteRoutes = require('./Routes/noteRoutes')
 
 // parse requests of content-type -application/json
 app.use(express.json());

@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useUserContext } from '../Context/UserContext'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
     return (
@@ -31,9 +32,10 @@ export default function Login() {
 
     const { currentUser, handleUpdateUser } = useUserContext();
 
-    const [loggedIn, setLoggedIn] = React.useState(currentUser.firstName)
-    const [errMsg, setErrMsg] = React.useState('')
-    const [loginAttempts, setLoginAttempts] = React.useState(0)
+    const [loggedIn, setLoggedIn] = React.useState(currentUser.firstName);
+    const [errMsg, setErrMsg] = React.useState('');
+    const [loginAttempts, setLoginAttempts] = React.useState(0);
+    const navigate =useNavigate();
 
     console.log(currentUser)
 
@@ -57,6 +59,7 @@ export default function Login() {
             let response = await axios.post('http://localhost:8080/users/login', {email: userEmail, password: userPassword});
             loggedInUser = response.data.data;
             console.log(loggedInUser)
+            
 
         } catch (err) {
             console.log(err.message)
@@ -78,6 +81,7 @@ export default function Login() {
             setErrMsg('')
             handleUpdateUser(loggedInUser)
             setLoggedIn(true)
+            navigate('/dashboard')
         }
 
     };
