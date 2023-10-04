@@ -1,25 +1,28 @@
 import { useState, useEffect } from "react";
 import APICard from "./APICard";
+import OutlinedCard from "./APICard";
 
 export default function QuoteApi () {
     const [results, setResults] = useState([]);
     useEffect (()=>{
-        fetch('https://zenquotes.io/api/quotes/')
+        fetch('https://api.allorigins.win/raw?url=https://zenquotes.io/api/quotes/')
       .then(response => response.json())
       .then(data=>{
-        const apiResults = data.data.map(item=>(
-            <APICard key={item.id} 
-            Quote={''}
-            AuthorName={''}
+        console.log(data)
+      const randomNum = Math.floor(Math.random()*data.length)
+
+        const apiResults = (
+            <OutlinedCard
+            Quote={data[randomNum]["q"]}
+            AuthorName={data[randomNum]["a"]}
             /> 
-        ))
+        )
         setResults(apiResults)
       })
-})
+},[])
 
 return (
     <div className="ApiComponentBox">
-        <h1>Quote of the day </h1>
           {results}
 
     </div>

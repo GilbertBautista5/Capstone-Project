@@ -16,7 +16,11 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import NotificationAddIcon from '@mui/icons-material/NotificationAdd';
+import PushPinIcon from '@mui/icons-material/PushPin';
+import ArchiveIcon from '@mui/icons-material/Archive';
+import CustomizedSwitches from './ThemeSwitcher';
 
 const drawerWidth = 240;
 
@@ -33,14 +37,14 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-        {['About', 'Dashboard', 'Tasks', 'Inbox'].map((text, index) => (
+        {['Notes', 'Reminders', 'Archive', 'Trash'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <DashboardIcon>
+
                 <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
-              </DashboardIcon>
+
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>

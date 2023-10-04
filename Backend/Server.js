@@ -5,6 +5,7 @@ const cors = require('cors')
 require("dotenv").config();
 let dbConnect = require("./dbConnect");
 let userRoutes = require('./Routes/userRoutes')
+let noteRoutes = require('/Routes/noteRoutes')
 
 // parse requests of content-type -application/json
 app.use(express.json());
@@ -15,6 +16,7 @@ res.json({ message: "Welcome to my Capstone application." });
 });
 
 app.use('/users', userRoutes);
+app.use('/notes', noteRoutes);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

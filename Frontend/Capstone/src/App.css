@@ -169,14 +169,15 @@
     display: flex;
     justify-content: space-between;
   }
-.ApiComponentBox {
+/* .ApiComponentBox {
   display: flex;
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   margin: 1em;
   padding: 1em;
-  text-align: center;
-  background: #ffffff;
-}
+  text-align: left;
+  background: #c4c2c2;
+  text-size-adjust: 12px;
+} */
   .Parapraph {
     display: flex;
   }
