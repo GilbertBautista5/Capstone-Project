@@ -9,7 +9,7 @@ import { useState } from "react";
 export default function UpdateForm({onUpdateUser}) {
   const [result, setResult] = useState("");
   const { currentUser, handleUpdateUser } = useUserContext();
-  const [userData, setUserData] = useState({ firstName: "", lastName: "",email: "",password: "" });
+  const [userData, setUserData] = useState({ firstName: currentUser.firstName, lastName: currentUser.lastName ,email: currentUser.email, });
   // console.log(currentUser)
 
   const handleSubmit = (event) => {
@@ -26,11 +26,9 @@ export default function UpdateForm({onUpdateUser}) {
 
     //convert form data to object and post to backend
     axios
-      .put(`http://localhost:8080/users/${currentUser._id}`,)
+      .put(`http://localhost:8080/users/${currentUser._id}`,updateUser)
       .then((response) => {
         console.log(response);
-        setUserData({ firstName: "", lastName: "",email: "" });
-        onUpdateUser();
       })
       .catch((err) => {
         console.log(err);
@@ -62,7 +60,7 @@ export default function UpdateForm({onUpdateUser}) {
         variant="outlined"
         name="firstName"
         required
-        value={userData.title}
+        value={userData.firstName}
         onChange={handleInputChange}
       />
       <TextField
@@ -72,7 +70,7 @@ export default function UpdateForm({onUpdateUser}) {
         variant="outlined"
         name="lastName"
         required
-        value={userData.description}
+        value={userData.lastName}
         onChange={handleInputChange}
       />
       <TextField
@@ -82,7 +80,7 @@ export default function UpdateForm({onUpdateUser}) {
         variant="outlined"
         name="email"
         required
-        value={userData.description}
+        value={userData.email}
         onChange={handleInputChange}
       />
 
