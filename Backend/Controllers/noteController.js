@@ -36,7 +36,7 @@ const createNote = (data, res) => {
 const updateNote = (req, res) => {
   
   console.log(req.body)
-  Models.Note.updateOne({id: req.params.id}, req.body )
+  Models.Note.updateOne({_id: req.params.id}, req.body )
   .then(data => res.send({result: 200, data: data}))
   .catch(err => {
   console.log(err);
