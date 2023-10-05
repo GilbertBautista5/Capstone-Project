@@ -10,8 +10,8 @@ How to start application 'PlanAhead'
 
 1. Git Pull request from Github https://github.com/GilbertBautista5/Capstone-Project
 2. Install dependecies (can be found in package.json) using - npm install "..."
-3. npm run dev to access frontend
-4. npm start to integrate backend (backend must be started before signing up otherwise an error will ocur)
+3. After installing all the dependecies use < npm run dev > to access frontend
+4. Then < npm start > to integrate backend (backend must be started before signing up otherwise an error will ocur)
 
 
 How to get started
