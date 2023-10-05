@@ -21,19 +21,22 @@ const card = (
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         Quote of the Day
       </Typography>
-      <Typography variant="h5" component="div"></Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary"></Typography>
-      <Typography variant="body2">
-        <br />
-        {""}
-      </Typography>
     </CardContent>
   </React.Fragment>
 );
 
 export default function OutlinedCard({ Quote, AuthorName }) {
   return (
-    <Box sx={{ minWidth: 275 }}>
+    <Box
+      sx={{
+        minWidth: 400,
+        maxWidth: 275,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        margin: 2,
+      }}
+    >
       <Card variant="outlined">
         {card}
         <h5> {Quote} </h5>

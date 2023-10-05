@@ -39,7 +39,7 @@ function Notes() {
     
         <NotesForm onUpdateNotes={addNote}/>
         <Box component="div" 
-    sx={{display: "flex", justifyContent:"space-between"}}>
+    sx={{display: "flex", flexWrap:"wrap"}}>
       {notes.map((note) => (
         <Note key={note._id} title={note.title} description={note.description} noteId={note._id} onDelete={deleteNote} onUpdate={addNote} />
       ))}

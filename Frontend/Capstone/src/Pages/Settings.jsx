@@ -1,5 +1,5 @@
 import React from 'react'
-import ResponsiveDrawer from '../Components/Sidebar2'
+import ResponsiveDrawer from '../Components/Sidebar3'
 
 export default function Settings() {
   return (
