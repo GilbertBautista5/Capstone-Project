@@ -41,7 +41,7 @@ function Notes() {
         <Box component="div" 
     sx={{display: "flex", justifyContent:"space-between"}}>
       {notes.map((note) => (
-        <Note key={note._id} title={note.title} description={note.description} noteId={note._id} onDelete={deleteNote} />
+        <Note key={note._id} title={note.title} description={note.description} noteId={note._id} onDelete={deleteNote} onUpdate={addNote} />
       ))}
       </Box>
     </Box>
