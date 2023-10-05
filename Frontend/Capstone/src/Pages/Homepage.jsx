@@ -13,12 +13,12 @@ export default function Homepage() {
         calendar integration, priority management, and real-time reminders. This
         app is your trusted companion for efficient time management and
         achieving a more organized and balanced life. "
+        <SignUp />
       </p>
       <DrawerAppBar />
       <div className="SignUpContainer">
         {" "}
-        <img src="../../public/Images/undraw.svg" alt="logo" height={500} width={500} />
-        <SignUp />
+        {/* <img src="../../public/Images/undraw.svg" alt="logo" height={500} width={500} /> */}
       </div>
     </div>
   );

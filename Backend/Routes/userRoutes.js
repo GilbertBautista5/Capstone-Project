@@ -2,7 +2,7 @@ let express = require("express");
 let router = express.Router();
 let Controllers = require("../Controllers"); //index.js
 
-router.get("/:id", (req, res) => {
+router.get("/", (req, res) => {
   Controllers.userController.getUsers(res);
 });
 

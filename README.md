@@ -10,6 +10,10 @@ How to start application 'PlanAhead'
 
 1. Git Pull request from Github https://github.com/GilbertBautista5/Capstone-Project
 2. Install dependecies (can be found in package.json) using - npm install "..."
+- ENV file should match the key to access Database 
+PORT=8080
+DB_URI=mongodb://127.0.0.1/Capstone
+JWT_KEY= Capstone1
 3. After installing all the dependecies use < npm run dev > to access frontend
 4. Then < npm start > to integrate backend (backend must be started before signing up otherwise an error will ocur)
 
