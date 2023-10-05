@@ -3,6 +3,7 @@ import Note from "./note";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useUserContext } from "../Context/UserContext";
+import NotesForm from '../Components/NotesForm'
 
 function Notes() {
   const [notes, setNotes] = useState([]);
@@ -17,10 +18,16 @@ function Notes() {
       });
   }, []);
 
+  const deleteNote = (noteId) => {
+    const updatedNotes = notes.filter((note)=> note._id !== noteId)
+    setNotes(updatedNotes)
+  }
+
   return (
     <div>
+        <NotesForm/>
       {notes.map((note) => (
-        <Note key={note._id} title={note.title} description={note.description} noteId={note._id} />
+        <Note key={note._id} title={note.title} description={note.description} noteId={note._id} onDelete={deleteNote} />
       ))}
     </div>
   );

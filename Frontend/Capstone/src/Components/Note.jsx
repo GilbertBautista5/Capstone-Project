@@ -8,11 +8,13 @@ import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import axios from "axios";
 
-export default function Note({ title, description, noteId }) {
+export default function Note({ title, description, noteId, onDelete }) {
   const handleDeleteNote = (noteId) => {
     axios
       .delete(`http://localhost:8080/notes/${noteId}`)
-      .then((result) => console.log(result))
+      .then((result) => {console.log(result);
+    onDelete(noteId)})
+
       .catch((error) => console.log(error));
   };
   return (
