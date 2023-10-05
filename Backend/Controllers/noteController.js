@@ -3,7 +3,17 @@ let Models = require("../Models"); //matches index.js
 
 const getNotes = (res) => {
   
-  Models.Notes.find({})
+  Models.Note.find({})
+    .then((data) => res.send({ result: 200, data: data }))
+    .catch((err) => {
+      console.log(err);
+      res.send({ result: 500, error: err.message });
+    });
+};
+
+const getUserNotes = (req,res) => {
+  
+  Models.Note.find({user: req.params.id})
     .then((data) => res.send({ result: 200, data: data }))
     .catch((err) => {
       console.log(err);
@@ -36,7 +46,7 @@ const updateNote = (req, res) => {
 
   const deleteNote = (req, res) => {
   
-  Models.Note.deleteOne({id:req.params.id})
+  Models.Note.deleteOne({_id:req.params.id})
   .then(data => res.send({result: 200, data: data}))
   .catch(err => {
   console.log(err);
@@ -46,6 +56,7 @@ const updateNote = (req, res) => {
 
 module.exports = {
   getNotes,
+  getUserNotes,
   createNote,
   updateNote,
   deleteNote,

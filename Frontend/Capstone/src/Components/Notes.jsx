@@ -1,64 +1,29 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import React from "react";
+import Note from "./note";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { useUserContext } from "../Context/UserContext";
-import Button from "@mui/material/Button"
-import axios from "axios"
 
+function Notes() {
+  const [notes, setNotes] = useState([]);
+  const { currentUser } = useUserContext();
 
-export default function BasicTextFields() {
-  const [result, setResult] = React.useState("");
-  const { currentUser, handleUpdateUser } = useUserContext();
-  console.log(currentUser)
-
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log(Object.fromEntries(data.entries()))
-    let title = data.get("title")
-    let description = data.get("description")
-    let newNote = {title: title, description: description, user: currentUser._id}
-    console.log(newNote)
-
-    //convert form data to object and post to backend
+  useEffect(() => {
     axios
-      .post(
-        "http://localhost:8080/notes/create",
-       newNote
-      )
-      .then((response) => {console.log(response)})
-      .catch((err) => {
-        console.log(err);
-        setResult(err.message + ": " + err.response.data.result);
+      .get(`http://localhost:8080/notes/${currentUser._id}`)
+      .then((response) => {
+        console.log(response.data.data);
+        setNotes(response.data.data);
       });
-  };
+  }, []);
+
   return (
-    <Box
-      component="form"
-      sx={{
-        "& > :not(style)": { m: 1, width: "25ch" },
-      }}
-      noValidate
-      onSubmit={handleSubmit}
-    >
-      <TextField
-        id="title"
-        label="Title"
-        variant="outlined"
-        name="title"
-        required
-      />
-        <TextField
-        id="description"
-        label="Take a note..."
-        variant="outlined"
-        name="description"
-        required
-      />
-
-      <Button type="submit" variant="outlined" > submit</Button>
-
-    </Box>
+    <div>
+      {notes.map((note) => (
+        <Note key={note._id} title={note.title} description={note.description} noteId={note._id} />
+      ))}
+    </div>
   );
 }
+
+export default Notes;

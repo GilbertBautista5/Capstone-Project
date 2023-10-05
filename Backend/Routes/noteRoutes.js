@@ -6,6 +6,10 @@ router.get("/", (req, res) => {
   Controllers.noteController.getNotes(res);
 });
 
+router.get("/:id", (req, res) => {
+  Controllers.noteController.getUserNotes(req,res);
+});
+
 router.post("/create", (req, res) => {
   Controllers.noteController.createNote(req.body, res);
 });
