@@ -185,3 +185,8 @@
   .header1 {
     justify-content: center;
   }
+
+  .NotesForm {
+    display: flex;
+    justify-content:flex-start ;
+  }
