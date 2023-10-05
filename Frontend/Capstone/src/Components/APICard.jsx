@@ -19,7 +19,7 @@ const card = (
   <React.Fragment>
     <CardContent>
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        Quote of the Day
+        <strong>Quote of the Day</strong>
       </Typography>
     </CardContent>
   </React.Fragment>
@@ -32,6 +32,7 @@ export default function OutlinedCard({ Quote, AuthorName }) {
         minWidth: 400,
         maxWidth: 275,
         display: "flex",
+        position: "center",
         flexDirection: "column",
         justifyContent: "space-between",
         margin: 2,

@@ -17,7 +17,7 @@ export default function Homepage() {
       </p>
       <div className="SignUpContainer">
         {" "}
-        <img src="../../public/Images/undraw.svg" alt="logo" />
+        <img src="../../public/Images/undraw.svg" alt="logo" height={500} width={500} />
         <SignUp />
       </div>
     </div>

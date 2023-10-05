@@ -21,6 +21,7 @@ import NotificationAddIcon from "@mui/icons-material/NotificationAdd";
 import InfoIcon from '@mui/icons-material/Info';
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useNavigate } from "react-router-dom";
+import WbCloudyIcon from '@mui/icons-material/WbCloudy';
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -33,7 +34,7 @@ function ResponsiveDrawer(props) {
   };
 
   const handleNavigate=(page) => {
-    page === 'notes' ? navigate('/dashboard') : navigate('/settings') ;  navigate('/about')
+    page === 'notes' ? navigate('/dashboard') : navigate('/settings')
 
   };
 
@@ -100,7 +101,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            PlanAhead
+            PlanAhead <WbCloudyIcon/>
           </Typography>
         </Toolbar>
       </AppBar>

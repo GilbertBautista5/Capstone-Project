@@ -1,5 +1,6 @@
 import React from 'react'
 import ResponsiveDrawer from '../Components/Sidebar3'
+import UpdateForm from '../Components/UpdateUser'
 
 export default function Settings() {
   return (
@@ -8,6 +9,8 @@ export default function Settings() {
         <div className='settingComponentbox'> 
         </div>
         <ResponsiveDrawer/>
+        <UpdateForm/>
+
        
  
       

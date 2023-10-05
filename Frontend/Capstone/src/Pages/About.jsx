@@ -19,7 +19,11 @@ export default function About() {
           stress by giving you the tools to create a well-structured daily
           routine. Say goodbye to chaos and hello to a more organized,
           efficient, and balanced life with PlanAhead.</p>
-      
+        
+          <div className="imageContainer">
+        {" "}
+        <img src='../../Images/public/Logo.svg' />
+      </div>
     </div>
   )
 }

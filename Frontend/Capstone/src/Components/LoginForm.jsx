@@ -146,7 +146,7 @@ export default function Login() {
                                 <Link to="/forgotpw">Forgot password?</Link>
                             </Grid>
                             <Grid item>
-                                <Link to="/signup">Don't have an account? Sign Up</Link>
+                                <Link to="/">Don't have an account? Sign Up</Link>
                             </Grid>
                         </Grid>
                     </Box>

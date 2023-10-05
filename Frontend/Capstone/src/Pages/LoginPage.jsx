@@ -10,7 +10,7 @@ export default function LoginPage() {
       <DrawerAppBar />
       <div className="LoginContainer">
         {" "}
-        <img src="../../public/Images/Log.svg" alt="logo" />
+        <img src="../../public/Images/Log.svg" alt="logo" width={500} height={500}/>
         <Login />
       </div>
     </div>
